@@ -24,4 +24,4 @@ RUN echo 'tfc-agent ALL=NOPASSWD: /usr/bin/apt-get , /usr/bin/apt' >> /etc/sudoe
 USER tfc-agent
 
 # this forces trace CLI logs, which show line by line output of Terraform plan/apply/etc
-CMD ["-log-level", "trace"]
+CMD ["-log-level", "trace", "-log-json", "true"]
